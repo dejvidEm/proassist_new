@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            <h1 className="reveal reveal-delay-1 mb-5 lg:mb-4 font-display font-black text-bay-charcoal leading-[1.02] tracking-[-0.03em] text-[clamp(1.65rem,3.6vw,3.25rem)] sm:text-[clamp(1.85rem,3.8vw,3.6rem)]">
+            <h1 className="reveal reveal-delay-1 mb-5 lg:mb-4 font-display font-black text-bay-charcoal leading-[1.02] tracking-[-0.03em] text-[clamp(1.92rem,4.5vw,3.35rem)] sm:text-[clamp(1.85rem,3.8vw,3.6rem)]">
               Spoľahlivá asistenčná služba
               <br />
               <span className="text-torque-blue">pri dopravnej nehode</span>
@@ -127,24 +127,29 @@ const HeroSection: React.FC = () => {
                 </div>
               </div>
               <div
-                className="absolute z-20 w-[min(100%,288px)] max-w-[calc(100vw-2.5rem)] service-ticket
+                className="absolute z-20 service-ticket shadow-[0_12px_40px_rgba(26,32,44,0.12)]
+                  max-sm:!py-2.5 max-sm:!px-3 max-sm:!rounded-xl sm:!p-[1.25rem]
+                  max-sm:max-w-[min(calc(100vw-2rem),216px)] sm:max-w-[min(100%,268px)] lg:max-w-[min(100%,288px)]
                   bottom-3 left-2 sm:bottom-5 sm:left-3 md:bottom-6 md:left-2
-                  -translate-x-2 translate-y-1 sm:-translate-x-4 sm:translate-y-2 lg:-translate-x-6 lg:translate-y-2 xl:-translate-x-8
-                  shadow-[0_12px_40px_rgba(26,32,44,0.12)]"
+                  max-sm:-translate-x-1 max-sm:translate-y-0.5 sm:-translate-x-4 sm:translate-y-2 lg:-translate-x-6 lg:translate-y-2 xl:-translate-x-8"
               >
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-torque-blue/10 flex items-center justify-center shrink-0">
-                    <Icon name="PhoneIcon" size={20} className="text-torque-blue" />
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <div className="w-8 h-8 rounded-full bg-torque-blue/10 flex items-center justify-center shrink-0 sm:w-10 sm:h-10">
+                    <Icon name="PhoneIcon" size={17} className="text-torque-blue sm:!w-5 sm:!h-5" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs font-bold text-bay-charcoal font-display">Dispečing ProAssist</p>
-                    <p className="text-xs text-text-muted font-body">Nonstop linka</p>
-                    <span className="cert-badge mt-1.5">Bez poplatku pri nehode</span>
+                    <p className="text-[10px] font-bold text-bay-charcoal font-display leading-tight sm:text-xs">
+                      Dispečing ProAssist
+                    </p>
+                    <p className="text-[10px] text-text-muted font-body sm:text-xs">Nonstop linka</p>
+                    <span className="cert-badge mt-1 max-sm:mt-1 max-sm:!py-0.5 max-sm:!px-2 max-sm:!text-[0.6rem] sm:mt-1.5">
+                      Bez poplatku pri nehode
+                    </span>
                   </div>
                 </div>
                 <a
                   href={CONTACT_PHONE_LOCAL_HREF}
-                  className="mt-4 block text-center font-display font-black tabular-nums tracking-[0.08em] text-[#DC2626] hover:text-[#B91C1C] transition-colors no-underline text-[clamp(2.125rem,8vmin,3.5rem)] leading-none [text-shadow:0_1px_0_rgba(255,255,255,0.6)]"
+                  className="mt-2 max-sm:mt-2 block text-center font-display font-black tabular-nums tracking-[0.06em] max-sm:tracking-[0.04em] text-[#DC2626] hover:text-[#B91C1C] transition-colors no-underline text-[clamp(1.45rem,6vmin,2.1rem)] sm:text-[clamp(2rem,8vmin,3.5rem)] leading-none [text-shadow:0_1px_0_rgba(255,255,255,0.6)]"
                   aria-label="Zavolať na krátku linku 18 001"
                 >
                   18001

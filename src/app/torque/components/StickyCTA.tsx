@@ -17,7 +17,7 @@ const StickyCTA: React.FC = () => {
 
   return (
     <div
-      className={`sticky-cta fixed top-0 left-0 right-0 z-40 bg-bay-charcoal border-b border-white/10 ${
+      className={`sticky-cta hidden md:block fixed top-0 left-0 right-0 z-40 bg-bay-charcoal border-b border-white/10 ${
         visible ? 'visible' : ''
       }`}
       style={{ top: 0 }}
