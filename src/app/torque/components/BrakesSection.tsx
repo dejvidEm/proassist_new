@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import { TORQUE_IMAGES } from '@/constants/torqueMedia';
 
 const BrakesSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -76,22 +77,10 @@ const BrakesSection: React.FC = () => {
           <div className="reveal-right lg:order-2">
             <div className="image-frame h-[420px] md:h-[520px] relative">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_1798e06d1-1772183048552.png"
-                alt="Asistenčné vozidlo na mieste zásahu po dopravnej nehode"
+                src={TORQUE_IMAGES.accidentCall}
+                alt="Nehoda vozidiel, klientka volá na asistenčnú linku z miesta udalosti"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute top-6 right-6 service-ticket max-w-[220px]">
-                <div className="flex gap-0.5 mb-2">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Icon key={s} name="StarIcon" size={12} variant="solid" className="text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-xs text-bay-charcoal font-body leading-relaxed">
-                  „V strese po čelnej som volala ProAssist. Do piatich minút som vedela, čo mám fotiť a čo povedať
-                  polícii.“
-                </p>
-                <p className="text-xs font-bold font-display text-text-muted mt-1.5">— Zuzana K., Peugeot 308</p>
-              </div>
             </div>
           </div>
         </div>

@@ -3,10 +3,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
-import { CONTACT_PHONE_HREF, CONTACT_CALL_CTA } from '@/constants/contact';
+import { CONTACT_PHONE_HREF, CONTACT_CALL_CTA, CONTACT_PHONE_LOCAL_DISPLAY, CONTACT_PHONE_LOCAL_HREF } from '@/constants/contact';
+import { TORQUE_IMAGES } from '@/constants/torqueMedia';
 
-const roadsideImageSrc =
-  'https://img.rocket.new/generatedImages/rocket_gen_img_1798e06d1-1772183048552.png';
+const roadsideImageSrc = TORQUE_IMAGES.officeContact;
 
 const BookingSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -127,10 +127,28 @@ const BookingSection: React.FC = () => {
                 {CONTACT_CALL_CTA}
               </a>
 
+              <div className="shrink-0 space-y-3 border-t border-border-subtle pt-5">
+                <p className="text-sm text-tool-steel font-body leading-relaxed">
+                  Zo slovenskej siete môžete využiť aj skrátenú linku{' '}
+                  <a
+                    href={CONTACT_PHONE_LOCAL_HREF}
+                    className="font-semibold text-torque-blue hover:text-torque-blue-dark whitespace-nowrap underline-offset-2 hover:underline"
+                  >
+                    {CONTACT_PHONE_LOCAL_DISPLAY}
+                  </a>
+                  . Pri dopravnej nehode vždy najprv{' '}
+                  <span className="font-semibold text-bay-charcoal">zavolajte</span> — poradíme vám hneď na mieste.
+                </p>
+                <p className="text-xs text-text-muted font-body leading-relaxed">
+                  Formulár vľavo využite pri všeobecných otázkach alebo ak ešte nestojíte pri vozidle. Na správy
+                  odpovedáme čo najskôr v pracovných dňoch; v núdzi volajte nepretržite.
+                </p>
+              </div>
+
               <div className="image-frame relative flex-1 min-h-[200px] w-full rounded-2xl overflow-hidden lg:min-h-0">
                 <AppImage
                   src={roadsideImageSrc}
-                  alt="Služba v teréne — nepretržitá asistenčná linka"
+                  alt="Kontakt s ProAssist — poradenstvo a nepretržitá linka"
                   fill
                   className="rounded-[inherit]"
                   sizes="(min-width: 1024px) 45vw, 100vw"

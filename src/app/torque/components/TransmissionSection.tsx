@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import { TORQUE_IMAGES } from '@/constants/torqueMedia';
 
 const TransmissionSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -25,22 +26,10 @@ const TransmissionSection: React.FC = () => {
           <div className="reveal-left">
             <div className="image-frame h-[420px] md:h-[520px] relative">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_1c6cebbfe-1772183046116.png"
+                src={TORQUE_IMAGES.towService}
                 alt="Odťah poškodeného vozidla po dopravnej nehode"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-6 right-6 service-ticket max-w-[240px]">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-torque-blue/10 flex items-center justify-center shrink-0">
-                    <Icon name="TruckIcon" size={20} className="text-torque-blue" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-bay-charcoal font-display">Sieť partnerov</p>
-                    <p className="text-xs text-text-muted font-body">Odťah & servis</p>
-                    <span className="cert-badge mt-1.5">Podľa poisťovne</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

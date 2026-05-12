@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
-import Icon from '@/components/ui/AppIcon';
+import { TORQUE_IMAGES } from '@/constants/torqueMedia';
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -25,22 +25,10 @@ const AboutSection: React.FC = () => {
           <div className="reveal-left">
             <div className="image-frame h-[420px] md:h-[520px] relative">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_1c6cebbfe-1772183046116.png"
+                src={TORQUE_IMAGES.towService}
                 alt="Tím a asistenčná služba ProAssist na cestách na Slovensku"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-6 left-6 service-ticket max-w-[260px]">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-torque-blue/10 flex items-center justify-center shrink-0">
-                    <Icon name="BuildingOffice2Icon" size={20} className="text-torque-blue" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-bay-charcoal font-display">ProAssist s.r.o.</p>
-                    <p className="text-xs text-text-muted font-body">Asistenčné služby</p>
-                    <span className="cert-badge mt-1.5">Slovensko</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

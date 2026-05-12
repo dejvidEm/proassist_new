@@ -43,9 +43,9 @@ const Footer: React.FC = () => {
             <Image
               src="/logo/logo.jpg"
               alt="ProAssist"
-              width={110}
-              height={33}
-              className="h-6 md:h-7 w-auto object-contain object-left shrink-0"
+              width={180}
+              height={56}
+              className="h-9 md:h-10 w-auto max-w-[200px] object-contain object-left shrink-0"
             />
             <nav className="flex flex-wrap justify-start sm:justify-center lg:justify-start gap-x-6 gap-y-2 text-sm font-semibold text-tool-steel">
               <a href="#services" className="hover:text-bay-charcoal transition-colors whitespace-nowrap">

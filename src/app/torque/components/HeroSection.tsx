@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import AppImage from '@/components/ui/AppImage';
+import Image from 'next/image';
 import Icon from '@/components/ui/AppIcon';
 import { SocialFacebookIcon, SocialInstagramIcon } from '@/components/SocialBrandIcons';
-import { CONTACT_PHONE_HREF, CONTACT_CALL_CTA } from '@/constants/contact';
+import { CONTACT_PHONE_HREF, CONTACT_CALL_CTA, CONTACT_PHONE_LOCAL_HREF } from '@/constants/contact';
 import { SOCIAL_FACEBOOK_URL, SOCIAL_INSTAGRAM_URL } from '@/constants/social';
+import { TORQUE_IMAGES } from '@/constants/torqueMedia';
 
-const heroImageSrc =
-  'https://img.rocket.new/generatedImages/rocket_gen_img_1798e06d1-1772183048552.png';
+const heroImageSrc = TORQUE_IMAGES.accidentCall;
 
 const stats = [
   { number: '24', label: 'nonstop asistenčná linka', suffix: '/7' },
@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative pt-28 pb-20 md:pt-36 md:pb-28 lg:pt-28 lg:pb-20 bg-workshop-white overflow-hidden"
+      className="relative pt-28 pb-20 md:pt-36 md:pb-28 lg:pt-28 lg:pb-20 bg-workshop-white overflow-visible"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -88,13 +88,13 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            <h1 className="headline-giant reveal reveal-delay-1 mb-6 lg:mb-4">
+            <h1 className="reveal reveal-delay-1 mb-5 lg:mb-4 font-display font-black text-bay-charcoal leading-[1.02] tracking-[-0.03em] text-[clamp(1.65rem,3.6vw,3.25rem)] sm:text-[clamp(1.85rem,3.8vw,3.6rem)]">
               Spoľahlivá asistenčná služba
               <br />
               <span className="text-torque-blue">pri dopravnej nehode</span>
             </h1>
 
-            <p className="reveal reveal-delay-2 text-lg md:text-xl text-tool-steel font-body font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10 lg:mb-6">
+            <p className="reveal reveal-delay-2 text-base md:text-lg text-tool-steel font-body font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8 lg:mb-6">
               Zavolajte dispečing ProAssist — poradíme vám čo ďalej, pomôžeme zdokumentovať situáciu a navedieme vás pri
               kontakte s políciou alebo poisťovňou. Služba je pre vás pri dopravnej nehode{' '}
               <span className="font-bold text-bay-charcoal">bez poplatku</span>.
@@ -112,16 +112,44 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:min-w-0">
-            <div className="image-frame reveal-right reveal-delay-2 relative h-[min(52vh,560px)] min-h-[360px]">
-              <AppImage
-                src={heroImageSrc}
-                alt="Asistenčné vozidlo a zásah pri dopravnej nehode na ceste"
-                fill
-                priority
-                className="rounded-[inherit]"
-                sizes="(min-width: 1024px) 45vw, 0px"
-              />
+          <div className="w-full lg:min-w-0 mt-10 lg:mt-0 pb-6 sm:pb-8 lg:pb-10">
+            <div className="reveal-right reveal-delay-2 relative w-full min-h-[260px] h-[min(40vh,380px)] sm:h-[min(42vh,420px)] sm:min-h-[300px] lg:h-[min(50vh,520px)] lg:min-h-[360px] overflow-visible">
+              <div className="absolute inset-0 overflow-hidden rounded-[20px] bg-surface-muted shadow-sm ring-1 ring-black/[0.06]">
+                <div className="relative h-full w-full">
+                  <Image
+                    src={heroImageSrc}
+                    alt="Dopravná nehoda na ceste — kontaktovanie asistenčnej služby"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(max-width: 1023px) 100vw, (max-width: 1536px) 46vw, 600px"
+                  />
+                </div>
+              </div>
+              <div
+                className="absolute z-20 w-[min(100%,288px)] max-w-[calc(100vw-2.5rem)] service-ticket
+                  bottom-3 left-2 sm:bottom-5 sm:left-3 md:bottom-6 md:left-2
+                  -translate-x-2 translate-y-1 sm:-translate-x-4 sm:translate-y-2 lg:-translate-x-6 lg:translate-y-2 xl:-translate-x-8
+                  shadow-[0_12px_40px_rgba(26,32,44,0.12)]"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-torque-blue/10 flex items-center justify-center shrink-0">
+                    <Icon name="PhoneIcon" size={20} className="text-torque-blue" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs font-bold text-bay-charcoal font-display">Dispečing ProAssist</p>
+                    <p className="text-xs text-text-muted font-body">Nonstop linka</p>
+                    <span className="cert-badge mt-1.5">Bez poplatku pri nehode</span>
+                  </div>
+                </div>
+                <a
+                  href={CONTACT_PHONE_LOCAL_HREF}
+                  className="mt-4 block text-center font-display font-black tabular-nums tracking-[0.08em] text-[#DC2626] hover:text-[#B91C1C] transition-colors no-underline text-[clamp(2.125rem,8vmin,3.5rem)] leading-none [text-shadow:0_1px_0_rgba(255,255,255,0.6)]"
+                  aria-label="Zavolať na krátku linku 18 001"
+                >
+                  18001
+                </a>
+              </div>
             </div>
           </div>
         </div>
