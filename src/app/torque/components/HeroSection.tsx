@@ -62,45 +62,23 @@ const HeroSection: React.FC = () => {
       <div className="relative max-w-5xl lg:max-w-7xl mx-auto px-6">
         <div className="lg:grid lg:grid-cols-2 lg:gap-10 xl:gap-14 lg:items-start">
           <div className="text-center lg:text-left lg:pt-1">
-            <div className="reveal flex flex-col items-center lg:items-start gap-4 mb-8 lg:mb-5">
-              <div className="flex items-center justify-center lg:justify-start gap-3">
-                <span className="section-label">Bezplatná asistenčná služba pri dopravnej nehode · Slovensko</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start gap-4">
-                <a
-                  href={SOCIAL_FACEBOOK_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook ProAssist"
-                  className="text-text-muted/45 hover:text-text-muted/80 transition-colors"
-                >
-                  <SocialFacebookIcon className="w-[17px] h-[17px]" />
-                </a>
-                <a
-                  href={SOCIAL_INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram ProAssist"
-                  className="text-text-muted/45 hover:text-text-muted/80 transition-colors"
-                >
-                  <SocialInstagramIcon className="w-[17px] h-[17px]" />
-                </a>
-              </div>
+            <div className="reveal flex justify-center lg:justify-start mb-8 lg:mb-5">
+              <span className="section-label">Bezplatná asistenčná služba pri dopravnej nehode · Slovensko</span>
             </div>
 
-            <h1 className="reveal reveal-delay-1 mb-5 lg:mb-4 font-display font-black text-bay-charcoal leading-[1.02] tracking-[-0.03em] text-[clamp(1.92rem,4.5vw,3.35rem)] sm:text-[clamp(1.85rem,3.8vw,3.6rem)]">
+            <h1 className="reveal reveal-delay-1 mb-5 lg:mb-4 font-display font-black text-bay-charcoal leading-[1.02] tracking-[-0.03em] text-[clamp(2.45rem,6vw,4.25rem)] sm:text-[clamp(2.1rem,4.5vw,4rem)]">
               Spoľahlivá asistenčná služba
               <br />
               <span className="text-torque-blue">pri dopravnej nehode</span>
             </h1>
 
-            <p className="reveal reveal-delay-2 text-base md:text-lg text-tool-steel font-body font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8 lg:mb-6">
-              Zavolajte dispečing ProAssist — poradíme vám čo ďalej, pomôžeme zdokumentovať situáciu a navedieme vás pri
-              kontakte s políciou alebo poisťovňou. Služba je pre vás pri dopravnej nehode{' '}
+            <p className="reveal reveal-delay-2 text-lg md:text-xl text-tool-steel font-body font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8 lg:mb-6">
+              Poradíme vám čo ďalej, pomôžeme zdokumentovať situáciu a navedieme vás pri kontakte s políciou alebo
+              poisťovňou. Služba je pre vás pri dopravnej nehode{' '}
               <span className="font-bold text-bay-charcoal">bez poplatku</span>.
             </p>
 
-            <div className="reveal reveal-delay-3 flex flex-col-reverse sm:flex-row items-center justify-center lg:justify-start gap-4 mb-16 lg:mb-0">
+            <div className="reveal reveal-delay-3 flex flex-col-reverse sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6 lg:mb-5">
               <button type="button" onClick={scrollToBooking} className="btn-secondary text-base px-8 py-4">
                 Napíšte nám
                 <Icon name="ChatBubbleLeftRightIcon" size={18} />
@@ -109,6 +87,40 @@ const HeroSection: React.FC = () => {
                 <Icon name="PhoneIcon" size={18} />
                 {CONTACT_CALL_CTA}
               </a>
+            </div>
+
+            <div
+              className="reveal reveal-delay-4 flex items-center gap-4 mb-16 lg:mb-0 w-full max-w-2xl mx-auto lg:mx-0"
+              aria-label="Sociálne siete"
+            >
+              <div
+                className="flex-1 min-w-[1.5rem] h-[2px] shrink bg-[rgba(26,32,44,0.28)] self-center rounded-full"
+                aria-hidden
+              />
+              <div className="flex items-center justify-center gap-4 shrink-0 py-0.5">
+                <a
+                  href={SOCIAL_FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook ProAssist"
+                  className="text-bay-charcoal/65 hover:text-bay-charcoal transition-colors"
+                >
+                  <SocialFacebookIcon className="w-[23px] h-[23px]" />
+                </a>
+                <a
+                  href={SOCIAL_INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram ProAssist"
+                  className="text-bay-charcoal/65 hover:text-bay-charcoal transition-colors"
+                >
+                  <SocialInstagramIcon className="w-[23px] h-[23px]" />
+                </a>
+              </div>
+              <div
+                className="flex-1 min-w-[1.5rem] h-[2px] shrink bg-[rgba(26,32,44,0.28)] self-center rounded-full"
+                aria-hidden
+              />
             </div>
           </div>
 

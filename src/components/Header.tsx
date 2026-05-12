@@ -60,18 +60,20 @@ const Header: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 md:gap-3 shrink-0">
-          <a
-            href={CONTACT_PHONE_HREF}
-            className="hidden md:flex items-center gap-2 text-sm font-semibold text-tool-steel hover:text-bay-charcoal transition-colors font-display whitespace-nowrap"
-          >
-            <Icon name="PhoneIcon" size={15} className="text-torque-blue" />
-            {CONTACT_PHONE_DISPLAY}
-          </a>
-          <a href={CONTACT_PHONE_HREF} className="hidden md:inline-flex btn-primary text-sm px-5 py-2.5">
-            <Icon name="PhoneIcon" size={16} className="-ml-0.5" />
-            {CONTACT_CALL_CTA}
-          </a>
+        <div className="flex items-center justify-end shrink-0 md:gap-3">
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href={CONTACT_PHONE_HREF}
+              className="flex items-center gap-2 text-sm font-semibold text-tool-steel hover:text-bay-charcoal transition-colors font-display whitespace-nowrap"
+            >
+              <Icon name="PhoneIcon" size={15} className="text-torque-blue" />
+              {CONTACT_PHONE_DISPLAY}
+            </a>
+            <a href={CONTACT_PHONE_HREF} className="btn-primary text-sm px-5 py-2.5">
+              <Icon name="PhoneIcon" size={16} className="-ml-0.5" />
+              {CONTACT_CALL_CTA}
+            </a>
+          </div>
           <button
             type="button"
             className="md:hidden p-2 rounded-lg hover:bg-surface-muted transition-colors"
@@ -102,14 +104,6 @@ const Header: React.FC = () => {
           >
             <Icon name="PhoneIcon" size={18} />
             {CONTACT_CALL_CTA}
-          </a>
-          <a
-            href={CONTACT_PHONE_HREF}
-            onClick={() => setMobileOpen(false)}
-            className="flex items-center justify-center gap-2 text-sm font-semibold text-torque-blue py-3 font-display"
-          >
-            <Icon name="PhoneIcon" size={15} />
-            {CONTACT_PHONE_DISPLAY}
           </a>
         </div>
       )}
